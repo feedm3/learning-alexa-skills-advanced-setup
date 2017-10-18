@@ -1,0 +1,21 @@
+{
+  "name": "skill-sample-nodejs-hello-world",
+  "version": "1.0.0",
+  "description": "Hello world sample skill",
+  "repository": "https://github.com/feedm3/learning-alexa-skills-basic-setup",
+  "author": "Fabian Dietenberger",
+  "license": "MIT",
+  "scripts": {
+    "deploy:init": "serverless deploy",
+    "deploy": "serverless deploy function --function skill",
+    "deploy:info": "serverless info --verbose",
+    "deploy-skill": "ask deploy",
+    "logs:tail": "serverless logs --tail --function skill"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.14"
+  },
+  "devDependencies": {
+    "serverless": "^1.23.0"
+  }
+}

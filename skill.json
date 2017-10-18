@@ -1,0 +1,33 @@
+{
+  "skillManifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa open hello world",
+            "Alexa tell hello world I am Jeff",
+            "Alexa tell hello world my name is Peter"
+          ],
+          "name": "basic-setup-hello-world",
+          "description": "Sample Full Description"
+        },
+        "de-DE": {
+          "summary": "Hier sollte eine kurze Beschreibung stehen",
+          "examplePhrases": [
+            "Alexa öffne hallo welt",
+            "Alexa sage hallo welt ich bin Pater",
+            "Alexa sage hallo welt dass mein name Peter ist"
+          ],
+          "name": "basic-setup-hallo-welt",
+          "description": "Hier sollte die detaillierte Beschreibung stehen"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "manifestVersion": "1.0"
+  }
+}
