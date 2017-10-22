@@ -9,7 +9,7 @@
             "Alexa tell hello world I am Jeff",
             "Alexa tell hello world my name is Peter"
           ],
-          "name": "basic-setup-hello-world",
+          "name": "advanced-setup-hello-world",
           "description": "Sample Full Description"
         },
         "de-DE": {
@@ -19,7 +19,7 @@
             "Alexa sage hallo welt ich bin Pater",
             "Alexa sage hallo welt dass mein name Peter ist"
           ],
-          "name": "basic-setup-hallo-welt",
+          "name": "advanced-setup-hallo-welt",
           "description": "Hier sollte die detaillierte Beschreibung stehen"
         }
       },
