@@ -143,3 +143,4 @@ Temporary Items
 ### Custom
 .ask/*
 !.ask/config.example
+.serverless

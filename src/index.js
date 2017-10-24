@@ -2,10 +2,12 @@
 
 const Alexa = require("alexa-sdk");
 const language = require('./speech-output');
+const config = require('./config');
 
 exports.handler = function (event, context) {
     const alexa = Alexa.handler(event, context);
     alexa.resources = language;
+    alexa.dynamoDBTableName = config.sessionTable;
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
