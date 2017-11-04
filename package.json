@@ -13,9 +13,9 @@
     "logs:tail": "serverless logs --tail --function skill"
   },
   "dependencies": {
-    "alexa-sdk": "^1.0.15"
+    "alexa-sdk": "^1.0.18"
   },
   "devDependencies": {
-    "serverless": "^1.23.0"
+    "serverless": "^1.24.0"
   }
 }
