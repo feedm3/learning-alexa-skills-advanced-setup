@@ -21,6 +21,9 @@ provider:
 
 custom: ${file(./src/config.js)}
 
+plugins:
+  - serverless-webpack
+
 resources:
   Resources:
     HelloWorldAdvancedSessionTable:

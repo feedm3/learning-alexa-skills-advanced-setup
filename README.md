@@ -13,14 +13,17 @@ This advanced setup is build on top of the basic setup which can be found
 
 - Node & NPM
 
-## Initialize
+## Improvements
 
-This advanced setup is build on top of the basic setup which can be found 
-[here](https://github.com/feedm3/learning-alexa-skills-basic-setup). 
+- DynamoDB as session storage
+- S3 for file hosting
+- webpack to minify deployment sources
 
-- Install everything: `npm install`
-- First time deployment: `npm run deploy:init`
-- Incremental deploys: `npm run deploy`
-- Watch skill logs in console: `npm run logs:tail`
-- Connect project to amazon developer console: `npm run deploy-skill:init`
-- Deploy skill infos to amazon developer console: `npm run deploy-skill`
+## Run
+
+- `npm install`: install everything
+- `npm run deploy:init`: first time deployment
+- `npm run deploy`: incremental deploys
+- `npm run logs:tail`: watch skill logs in console
+- `npm run deploy-skill:init`: connect project to amazon developer console
+- `npm run deploy-skill`: deploy skill infos to amazon developer console

@@ -23,6 +23,7 @@ const handlers = {
         this.emit('SayHelloName');
     },
     'SayHello'() {
+        console.log(`Session data: ${JSON.stringify(this.attributes)}`);
         const name = this.attributes[config.SESSION_ATTRIBUTES.NAME];
 
         if (name) {
@@ -33,6 +34,7 @@ const handlers = {
     },
     'SayHelloName'() {
         const name = this.event.request.intent.slots.name.value;
+        console.log(`Saving name '${name}' into session...`);
         this.attributes[config.SESSION_ATTRIBUTES.NAME] = name;
         this.emit(':tell', this.t('HELLO_SAVED_NAME', { name: name }));
     },
