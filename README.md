@@ -1,13 +1,13 @@
 # Alexa skill development done right: Advanced setup
 
 This repo is used as template for an advanced alexa skill. Advanced because it comes with a DynamoDB and S3 storage.
-Also the skill's code get's bundled to speed up deployment by roughly 90%.
+Also the skill's code get's bundled to speed up deployment.
 
 The details and motivations are explained in a 
-[medium post](https://medium.com/@feedm3/alexa-skill-development-done-right-advanced-setup-4448d65e46ba).
+[medium post](https://medium.com/@feedm3/alexa-skill-development-done-right-advanced-setup-b00bce268a95).
 
 This advanced setup is build on top of the basic setup which can be found 
-[here](https://github.com/feedm3/learning-alexa-skills-basic-setup). 
+[here](https://github.com/feedm3/learning-alexa-skills-basic-setup).
 
 ## Prerequisites
 
@@ -20,6 +20,10 @@ This advanced setup is build on top of the basic setup which can be found
 - webpack to minify deployment sources
 
 ## Run
+
+All commands are described in detail in the [basic setup](https://github.com/feedm3/learning-alexa-skills-basic-setup).
+
+Here's just a short recap:
 
 - `npm install`: install everything
 - `npm run deploy:init`: first time deployment
