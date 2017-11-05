@@ -54,6 +54,7 @@ resources:
               - GET
             AllowedOrigins:
               - http://ask-ifr-download.s3.amazonaws.com
+              - https://ask-ifr-download.s3.amazonaws.com
     HelloWorldAdvancedBucketPolicy:
       Type: AWS::S3::BucketPolicy
       Properties:

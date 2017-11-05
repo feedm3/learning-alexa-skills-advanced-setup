@@ -29,7 +29,15 @@ const handlers = {
         if (name) {
             this.emit(':tell', this.t('HELLO_NAME', { name: name }));
         } else {
-            this.emit(':tell', this.t('HELLO'));
+            const cardTitle = this.t('HELLO');
+            const cardContent = cardTitle;
+            const cardImages = config.IMAGE_URLS.WELCOME;
+
+            this.emit(':tellWithCard',
+                this.t('HELLO'),
+                cardTitle,
+                cardContent,
+                cardImages);
         }
     },
     'SayHelloName'() {

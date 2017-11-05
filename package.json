@@ -11,10 +11,12 @@
     "deploy:info": "serverless info --verbose",
     "deploy-skill": "ask deploy",
     "deploy-skill:init": "ask init",
+    "deploy-assets": "aws s3 sync ./assets s3://hello-world-store/ --delete",
     "logs:tail": "serverless logs --tail --function skill"
   },
   "dependencies": {
-    "alexa-sdk": "^1.0.18"
+    "alexa-sdk": "^1.0.18",
+    "aws-sdk": "^2.145.0"
   },
   "devDependencies": {
     "ask-cli": "^1.0.0-beta.4",
