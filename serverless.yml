@@ -40,6 +40,35 @@ resources:
           WriteCapacityUnits: 2
         TableName: ${self:custom.sessionTable}
 
+    HelloWorldAdvancedBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.fileStorage}
+        AccessControl: PublicReadWrite
+        CorsConfiguration:
+          CorsRules:
+          - AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - http://ask-ifr-download.s3.amazonaws.com
+    HelloWorldAdvancedBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: HelloWorldAdvancedBucket
+        PolicyDocument:
+          Statement:
+            - Action:
+                - 's3:GetObject'
+              Effect: Allow
+              Principal: '*'
+              Resource:
+                Fn::Join:
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: HelloWorldAdvancedBucket
+                    - '/*'
+
 functions:
   skill:
     handler: src/index.handler
