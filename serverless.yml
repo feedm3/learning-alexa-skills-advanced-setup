@@ -38,12 +38,12 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 2
           WriteCapacityUnits: 2
-        TableName: ${self:custom.sessionTable}
+        TableName: ${self:custom.INFRASTRUCTURE.sessionTable}
 
     HelloWorldAdvancedBucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: ${self:custom.fileStorage}
+        BucketName: ${self:custom.INFRASTRUCTURE.fileStorage}
         AccessControl: PublicReadWrite
         CorsConfiguration:
           CorsRules:

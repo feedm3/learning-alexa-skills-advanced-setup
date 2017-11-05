@@ -1,6 +1,15 @@
-const config = {
+const INFRASTRUCTURE = {
     sessionTable: 'hello-world-advanced-session',
     fileStorage: 'hello-world-store'
 };
 
-module.exports = () => config;
+const SESSION_ATTRIBUTES = {
+    NAME: 'name'
+};
+
+const CONFIG = {
+    INFRASTRUCTURE,
+    SESSION_ATTRIBUTES
+};
+
+module.exports = () => CONFIG;

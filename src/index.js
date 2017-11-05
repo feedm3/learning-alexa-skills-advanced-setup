@@ -2,12 +2,12 @@
 
 const Alexa = require("alexa-sdk");
 const language = require('./speech-output');
-const config = require('./config');
+const config = require('./config')();
 
 exports.handler = function (event, context) {
     const alexa = Alexa.handler(event, context);
     alexa.resources = language;
-    alexa.dynamoDBTableName = config.sessionTable;
+    alexa.dynamoDBTableName = config.INFRASTRUCTURE.sessionTable;
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
@@ -23,11 +23,18 @@ const handlers = {
         this.emit('SayHelloName');
     },
     'SayHello'() {
-        this.emit(':tell', this.t('HELLO'));
+        const name = this.attributes[config.SESSION_ATTRIBUTES.NAME];
+
+        if (name) {
+            this.emit(':tell', this.t('HELLO_NAME', { name: name }));
+        } else {
+            this.emit(':tell', this.t('HELLO'));
+        }
     },
     'SayHelloName'() {
         const name = this.event.request.intent.slots.name.value;
-        this.emit(':tell', this.t('HELLO_NAME', { name: name }));
+        this.attributes[config.SESSION_ATTRIBUTES.NAME] = name;
+        this.emit(':tell', this.t('HELLO_SAVED_NAME', { name: name }));
     },
     'SessionEndedRequest'() {
         console.log('Session ended with reason: ' + this.event.request.reason);

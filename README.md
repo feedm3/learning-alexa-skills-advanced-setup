@@ -18,5 +18,9 @@ This advanced setup is build on top of the basic setup which can be found
 This advanced setup is build on top of the basic setup which can be found 
 [here](https://github.com/feedm3/learning-alexa-skills-basic-setup). 
 
-- `npm install`
-- `npm run deploy:init`
+- Install everything: `npm install`
+- First time deployment: `npm run deploy:init`
+- Incremental deploys: `npm run deploy`
+- Watch skill logs in console: `npm run logs:tail`
+- Connect project to amazon developer console: `npm run deploy-skill:init`
+- Deploy skill infos to amazon developer console: `npm run deploy-skill`
