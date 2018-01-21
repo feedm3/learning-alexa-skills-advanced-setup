@@ -47,7 +47,7 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.INFRASTRUCTURE.fileStorage}
-        AccessControl: PublicReadWrite
+        AccessControl: Private
         CorsConfiguration:
           CorsRules:
           - AllowedMethods:
